@@ -1,0 +1,49 @@
+const and let uses the local and global scopes in javascript
+and var also use the Global and local scope
+
+The main difference between var and let is that var use functional scope where
+let and const uses curly braces scope
+
+example :
+
+if(condition){
+    let variableName = "value"
+    console.log(variableName); // end of the scope
+}
+
+console.log(variableName) // it's generates some error
+
+if(condition){
+    variableName = "value"
+    console.log(variableName) // it's now global variable
+}
+
+console.log(variableName) // it's works totaly fine
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+we must have to assign a value to the constant but in case of let it's not mandatory
+
+const variableName // it's generates some error
+const variableName = "value" //it's fine
+
+let variableName //it's fine
+variableName = "value" // fine
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+we can redeclare a same variable with use of var but in case of let and  const it's not
+possible
+
+ex:
+var userName = 'max'
+var userName = 'yash' // it's works fine
+
+console.log(userName) // yash
+
+let userName = 'max'
+let userName = 'yash' // it's generates some error here
+
+console.log(userName) // can't works
+
+------------------------------------------------------------------------------------------------------------------------------------
